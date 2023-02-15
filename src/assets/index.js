@@ -11,6 +11,11 @@ import prod06 from "./prod06.png";
 import slide01 from "./slide1.png";
 import slide02 from "./slide2.png";
 import slide03 from "./slide3.png";
+import feat01 from "./feat01.png";
+import feat02 from "./feat02.png";
+import feat03 from "./feat03.png";
+import feat04 from "./feat04.png";
+import feat05 from "./feat05.png";
 
 export {
   avatar,
@@ -26,4 +31,9 @@ export {
   slide01,
   slide02,
   slide03,
+  feat01,
+  feat02,
+  feat03,
+  feat04,
+  feat05,
 };
