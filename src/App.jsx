@@ -1,31 +1,50 @@
 import "./app.scss";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+  Navbar,
+  Hero,
+  ProductCard,
+  Button,
+  Product,
+  Products,
+} from "./components";
+import { Home, About, Footer, Categories } from "./pages";
 
 function App() {
+  const Layout = () => {
+    return (
+      <div className="app">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    );
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <div>
-          <h1>Hello World</h1>
-          <Link to="about">About Us</Link>
-        </div>
-      ),
-    },
-    {
-      path: "about",
-      element: <div>About</div>,
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/products",
+          element: <Products />,
+        },
+        {
+          path: "/product/:id",
+          element: <Product />,
+        },
+      ],
     },
   ]);
 
   return (
-    <div className="app">
-      <h1>Ms Store Clone</h1>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }

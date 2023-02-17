@@ -1,2 +1,23 @@
 .home {
+  display: flex;
+  max-width: 100%;
+  // margin: 0 auto;
+  background-color: #f1f3f5;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  // min-height: 500px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+      width: 300px;
+    }
+    .right {
+      flex: auto;
+    }
+  }
 }

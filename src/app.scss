@@ -4,6 +4,7 @@ main colors:
 border-color:#f1f3f5;
 background-color:#f8f9fa;
 text-color: #212529
+h1: #868e96
 
 ---------------- 
 button colors 
@@ -30,3 +31,19 @@ secondary: #ffa94d
 primary: #f76707
 
 */
+.app {
+  max-width: 100%;
+  margin: 2px auto;
+  background-color: #f1f3f5;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  min-height: 500px;
+}
+.content {
+  display: flex;
+}
+.hotel-view {
+  background-color: #fff;
+
+  flex: 1;
+}
